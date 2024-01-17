@@ -1,2 +1,6 @@
-# Bank_Churn_Prediction
-Predicting churn for bank customer 
+# Churn Prediction for Bank Customer 
+Creating Machine Learning model to predict Customer who has potential to churn. 
+
+## Sumary Insight 
+
+
