@@ -37,6 +37,7 @@ Untuk mengukur keberhasilan objective tersebut dengan **churn rate**. Kami juga 
 Kami menggunakan data set bank customers yang berasal dari [kaggle.com](https://www.kaggle.com/datasets/adammaus/predicting-churn-for-bank-customers). Berikut beberapa insight yang kami temukan.
 
 ### Descriptive Statistic
+-----
 
 <img src="./image/data_info.png" alt="drawing" width="300"/>
 
@@ -48,9 +49,10 @@ Jarak antara nilai median dan rata - rata CreditScore, Age, EstimatedSalary, dan
 
 <img src="./image/data_describe_categorical.png" alt="decribe" />
 
-Fitur Geography memiliki 3 nilai unik dengan dominasi negara France (50%). Fitur Gender dengan 2 nilai unik. Fitur HasCard dan IsActiveMember dengan 2 nilai unik. Sedangkan variable target Exited memiliki 2 nilai unik dengan jumlah nilai (1) atau nasabah sudah tidak menggunakan jasa bank lagi sebesar 21%.
+Fitur Geography memiliki 3 nilai unik dengan dominasi negara France (50%). Fitur Gender dengan 2 nilai unik. Fitur HasCard dan IsActiveMember dengan 2 nilai unik. Sedangkan variable target Exited memiliki 2 nilai unik dengan jumlah nilai (1) atau nasabah sudah tidak menggunakan jasa bank lagi sebesar **21%**.
 
 ### Univariate Analysis
+-----
 
 <img src="./image/plot_kde_univariate.png" alt="univariate" width="650px" heigh="auto" />
 
@@ -66,7 +68,16 @@ Variabel target exited memiliki bentuk **data tidak seimbang**. Variabel ini mem
 Pada semua fitur dengan tipe categorical tidak seimbang ketika data dipecah berdasarkan variabel targetnya. Diperlukan pemerataan data agar performa *machine learning* menjadi lebih baik.
 
 ### Multivariate Analysis
+-----
+<img src="./image/heat_map.png" alt="univariate" width="700px" heigh="auto"/>
 
+Semua fitur numerikal cenderung memiliki hubungan korelasi yang lemah (0 - 0,3) dengan variabel target exited. Oleh karena itu **tidak ada hal yang mengindikasikannya adanya multikolinearitas**. <br>
+
+<img src="./image/kde_plot_multivariate.png" alt="univariate" width="500px" heigh="auto"/>
+
+Berdasarkan plot diatas, tidak terlihat adanya segmentasi tertentu pada distribusi antara nasabah churn dan non-churn terhadap masing-masing fitur. Namun, pada fitur Age, rentang nilai area pemusatan lebih bergeser ke arah yang lebih tua terhadap distribusi nasabah yang churn.<br>
+
+Tidak terlihat adanya segmentasi tertentu pada distribusi data nasabah churn dan non-churn terhadap hubungan fitur (scatter plot). Hal tersebut **dapat berpotensi machine learning mengalami penurunan akurasi**.
 
 -----
 
