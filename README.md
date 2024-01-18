@@ -4,7 +4,7 @@ Creating Machine Learning model to predict Customer who has potential to churn.
 ## Stage 0 
 >Problem Statement
 
-Perusahaan Rakamin Bank Center (RBC) tidak memiliki model <br>
+>Perusahaan Rakamin Bank Center (RBC) tidak memiliki model <br>
 Machine Learning (ML) untuk memprediksi nasabah mana yang akan <br>
 churn. Dari data historikal yang ada, diperoleh jumlah nasabah churn <br>
 sebesar 20,37% dari keseluruhan data. Mengacu pada laman <br>
@@ -15,13 +15,15 @@ melebihi batas toleransi tersebut. Dengan model ML yang dibuat, <br>
 diharapkan menjadi acuan bagi tim bisnis untuk mengambil langkah <br>
 strategi mengatasi nasabah yang terdeteksi churn. 
 
-Goals 
+----------
+>Goals 
 
-: Membuat model Machine Learning dengan tingkat akurasi > () dan tingkat presisi > () untuk membantu bank Rakamin Bank Center (RBC) dalam memprediksi nasabah yang akan churn dan membantu tim bisnis dalam menentukan strategi terhadap nasabah yang akan churn
+>Membuat model Machine Learning dengan tingkat akurasi > () dan tingkat presisi > () untuk membantu bank Rakamin Bank Center (RBC) dalam memprediksi nasabah yang akan churn dan membantu tim bisnis dalam menentukan strategi terhadap nasabah yang akan churn
 
-Objectives 
+---------
+>Objectives 
 
-* Mengidentifikasi variabel yang memiliki relevansi dengan keputusan nasabah untuk berhenti berlangganan
+>* Mengidentifikasi variabel yang memiliki relevansi dengan keputusan nasabah untuk berhenti berlangganan
 * Mempersiapkan data historikal yang digunakan untuk model Machine Learning
 * Membangun model prediktif untuk mengklasifikasikan nasabah yang berpotensi churn
 * Melakukan optimasi model sehingga mendapatkan hasil yang terbaik
