@@ -17,7 +17,7 @@ strategi mengatasi nasabah yang terdeteksi churn.
 
 Goals 
 
-: Membuat model Machine Learning dengan akurasi () untuk membantu bank Rakamin Bank Center (RBC) dalam memprediksi nasabah yang akan churn dan membantu tim bisnis dalam menentukan strategi terhadap nasabah yang akan churn
+: Membuat model Machine Learning dengan tingkat akurasi > () dan tingkat presisi > () untuk membantu bank Rakamin Bank Center (RBC) dalam memprediksi nasabah yang akan churn dan membantu tim bisnis dalam menentukan strategi terhadap nasabah yang akan churn
 
 Objectives 
 
