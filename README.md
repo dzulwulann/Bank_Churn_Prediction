@@ -2,7 +2,7 @@
 Creating Machine Learning model to predict Customer who has potential to churn. 
 
 ## Stage 0 
-Problem Statement
+>Problem Statement
 
 Perusahaan Rakamin Bank Center (RBC) tidak memiliki model <br>
 Machine Learning (ML) untuk memprediksi nasabah mana yang akan <br>
