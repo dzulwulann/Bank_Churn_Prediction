@@ -13,11 +13,11 @@ diharapkan menjadi acuan bagi tim bisnis untuk mengambil langkah strategi mengat
 ----------
 **Goals** 
 
-Membuat model Machine Learning dengan tingkat akurasi > () dan tingkat presisi > () untuk membantu bank Rakamin Bank Center (RBC) 
+Membuat model Machine Learning dengan tingkat akurasi > **70%** dan tingkat presisi > () untuk membantu bank Rakamin Bank Center (RBC) 
 dalam memprediksi nasabah yang akan churn dan membantu tim bisnis dalam menentukan strategi terhadap nasabah yang akan churn
 
 ---------
-Objectives 
+**Objectives** 
 
 * Mengidentifikasi variabel yang memiliki relevansi dengan keputusan nasabah untuk berhenti berlangganan
 * Mempersiapkan data historikal yang digunakan untuk model Machine Learning
@@ -31,9 +31,12 @@ Untuk mengukur keberhasilan objective tersebut dengan **churn rate**. Kami juga 
 
 ## Stage 1
 
-**EDA**
+**Exploratory Data Analysis**
 
-Kami menggunakan data set bank customers yang berasal dari [kaggle.com](https://www.kaggle.com/datasets/adammaus/predicting-churn-for-bank-customers). Berikut beberapa insight yang kami temukan 
+
+Kami menggunakan data set bank customers yang berasal dari [kaggle.com](https://www.kaggle.com/datasets/adammaus/predicting-churn-for-bank-customers). Berikut beberapa insight yang kami temukan.
+
+### Descriptive Statistic
 
 <img src="./image/data_info.png" alt="drawing" width="300"/>
 
@@ -41,11 +44,31 @@ Dataset berisi 10.000 row data dengan 14 fitur kolom. Kolom Exited sebagai varia
 
 <img src="./image/data_describe_num.png" alt="decribe" />
 
-Jarak antara nilai median dan rata - rata CreditScore, Age, EstimatedSalary, dan Tenure  sangat dekat, sehingga berdasarkan angkanya, sebaran data cenderung memiliki distribusi normal. Sedangkan untuk fiture balance, jarak antara nilai median dan rata - rata berjauhan sehingga cenderung memiliki distibusi skew dan memiliki nilai outlier yang ekstrim.
+Jarak antara nilai median dan rata - rata CreditScore, Age, EstimatedSalary, dan Tenure  sangat dekat. Sehingga berdasarkan angkanya, sebaran data cenderung memiliki distribusi normal. Sedangkan untuk fitur balance, jarak antara nilai median dan rata - rata berjauhan sehingga cenderung memiliki distibusi skew dan memiliki nilai outlier yang ekstrim.
 
 <img src="./image/data_describe_categorical.png" alt="decribe" />
 
 Fitur Geography memiliki 3 nilai unik dengan dominasi negara France (50%). Fitur Gender dengan 2 nilai unik. Fitur HasCard dan IsActiveMember dengan 2 nilai unik. Sedangkan variable target Exited memiliki 2 nilai unik dengan jumlah nilai (1) atau nasabah sudah tidak menggunakan jasa bank lagi sebesar 21%.
+
+### Univariate Analysis
+
+<img src="./image/plot_kde_univariate.png" alt="univariate" width="650px" heigh="auto" />
+
+Fitur CreditScore, Age, Balance, dan EstimateSalary memiliki **distribusi normal**.Fitur Tenure memiliki bentuk **uniform** bertipe diskrit karena mengandung banyak lonjakan di sekitar area pemusatan data, oleh karenanya, tidak bisa dikatakan sebagai distribusi yang datanya berbentuk normal dan bisa diasumsikan sebagai bentuk data numerik bertipe kategorikal. Sedangkan fitur numOfProduct memiliki **distribusi bimodal**.
+
+<img src="./image/box_plot_univariate.png" alt="univariate" width="650px" heigh="auto"/>
+
+Fitur CreditScore dan Age  memiliki **nilai outlier** melewati batas bawah whisker pada boxplot. Fitur NumOfProduct memiliki **satu outlier**. Fitur numerical lainnya **tidak memiliki outlier**.
+
+<img src="./image/pie_chart_exited.png" alt="univariate" width="300px" heigh="auto"/>
+
+Variabel target exited memiliki bentuk **data tidak seimbang**. Variabel ini membutuhkan upaya metode oversampling atau undersampling sebagai langkah penanganan selanjutnya untuk training machine learning. 
+Pada semua fitur dengan tipe categorical tidak seimbang ketika data dipecah berdasarkan variabel targetnya. Diperlukan pemerataan data agar performa *machine learning* menjadi lebih baik.
+
+### Multivariate Analysis
+
+
+-----
 
 
 
