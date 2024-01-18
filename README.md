@@ -80,8 +80,23 @@ Berdasarkan plot diatas, tidak terlihat adanya segmentasi tertentu pada distribu
 Tidak terlihat adanya segmentasi tertentu pada distribusi data nasabah churn dan non-churn terhadap hubungan fitur (scatter plot). Hal tersebut **dapat berpotensi machine learning mengalami penurunan akurasi**.
 
 -----
+### Follow-Up Preprocessing
 
+1. Menghapus beberapa fitur yang tidak relevan untuk pemodelan ML seperti fitur rownumbers, CustomerID, dan Surname.
 
+2. Mengecek apakah ada sebuah data duplikat, bila ada lakukan penghapusan pada data duplikat tersebut.
+
+3. Menghandle outliers terhadap fitur skor kredit dan usia dengan metode z-score atau IQR (keduanya akan dibandingkan untuk mengukur performa ML), selain itu bisa juga menggunakan model ML lainnya yang sekiranya robust terhadap outlier.
+
+4. Melakukan fitur engineering terhadap penambahan fitur baru guna meningkatkan performa dari model ML.
+
+5. Melakukan data scaling terhadap beberapa fitur seperti skor kredit menggunakan normalisasi, pada fitur saldo menggunakan normalisasi/standarisasi, dan pada fitur gaji menggunakan metode log-transformation. Setelah itu lakukan pengecekan bentuk distribusi datanya kembali apakah sudah mendekati normal atau belum.
+
+6. Melakukan fitur encoding terhadap fitur kategorikal dengan metode one-hot encoding pada fitur jenis kelamin dan metode label encoding pada fitur geografi. Kemudian cek kembali apakah adanya indikasi multikolinearitas setelah dilakukan fitur encoding.
+
+7. Melakukan proses menangani data yang tidak seimbang terhadap variabel target menggunakan metode over sampling ataupun under sampling. Keduanya akan dilakukan perbandingan akurasi terhadap model ML.
+
+-----
 
 
 
