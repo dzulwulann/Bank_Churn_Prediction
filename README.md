@@ -106,27 +106,27 @@ Tidak terlihat adanya segmentasi tertentu pada distribusi data nasabah churn dan
 * Sekitar **20% nasabah sudah berhenti** menggunakan jasa bank atau tidak menggunakan produk yang ada pada bank
 * Nasabah churn terjadi pada semua tipe CreditScore dan sebanyak **45%** didominasi oleh status kredit buruk *(Bad Credit)*.
 
-<img src="./image/bar_country_insight_2.png" style ="inline-block" alt="univariate" width="auto" heigh="300"/>
-<img src="./image/bar_gender_insight_2.png" style ="inline-block"  alt="univariate" width="auto" heigh="300"/>
+<img src="./image/bar_country_insight_2.png" style ="inline-block" alt="univariate" width="auto" heigh="auto"/>
+<img src="./image/bar_gender_insight_2.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
 
 * Akumulasi persentase dari nasabah churn yaitu sekitar **80%** berasal dari negara **Prancis** dan **Jerman**.
 * Sekitar **50%** nasabah churn bersumber dari jenis kelamin perempuan 
 
-<img src="./image/bar_generation_insigh_3.png" style ="inline-block" alt="univariate" width="auto" heigh="300"/>
-<img src="./image/bar_tenure_insight_3.png" style ="inline-block"  alt="univariate" width="auto" heigh="300"/>
+<img src="./image/bar_generation_insigh_3.png" style ="inline-block" alt="univariate" width="auto" heigh="auto"/>
+<img src="./image/bar_tenure_insight_3.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
 
 * Akumulasi persentase dari nasabah churn sekitar **86%** yang berasal dari **generasi Milenials** dan **generasi X**.
 * Tidak ada kriteria tertentu mengenai faktor penyebab nasabah churn berdasarkan tenure
 
-<img src="./image/bar_balance_insight_4.png" style ="inline-block" alt="univariate" width="350" heigh="auto"/>
-<img src="./image/bar_product_insight_4.png" style ="inline-block"  alt="univariate" width="350" heigh="auto"/>
+<img src="./image/bar_balance_insight_4.png" style ="inline-block" alt="univariate" width="auto" heigh="auto"/>
+<img src="./image/bar_product_insight_4.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
 
 
 * Akumulasi persentase dari nasabah churn sekitar **61%** berasal dari nasabah dengan rentang jumlah balance menengah ke atas. 
 * Sebanyak **69%** nasabah churn disebabkan karena hanya memiliki **satu jenis produk saja**. 
 
-<img src="./image/bar_creditcard_insight_5.png" style ="inline-block" alt="univariate" width="350" heigh="auto"/>
-<img src="./image/bar_isactive_insight_5.png" style ="inline-block"  alt="univariate" width="350" heigh="auto"/>
+<img src="./image/bar_creditcard_insight_5.png" style ="inline-block" alt="univariate" width="auto" heigh="auto"/>
+<img src="./image/bar_isactive_insight_5.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
 
 * Sebanyak 70% nasabah churn ternyata sudah memiliki kartu kredit
 * Sebanyak 64% nasabah churn disebabkan karena tidak aktif kembali dalam melakukan aktivitas transaksi
