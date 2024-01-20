@@ -130,3 +130,33 @@ Tidak terlihat adanya segmentasi tertentu pada distribusi data nasabah churn dan
 
 * Sebanyak 70% nasabah churn ternyata sudah memiliki kartu kredit
 * Sebanyak 64% nasabah churn disebabkan karena tidak aktif kembali dalam melakukan aktivitas transaksi
+
+<img src="./image/creditcard_milenial.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
+
+Sebanyak **60%** nasabah pada kedua generasi tersebut tidak menggunakan produk bank kembali namun memiliki kartu kredit. Perlu dilakukan pengecekan lebih dalam mengenai status skor kredit mereka.
+
+<img src="./image/milenial_creditscore.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
+ 
+Sebanyak **38%** nasabah kedua generasi tersebut mempunyai status skor kredit yang buruk, lebih tinggi dibandingkan status lainnya.  
+
+## Sumary Business Insight
+Beberapa rangkuman insight yang diperoleh dari hasil analisa data adalah :
+
+1. Jumlah nasabah churn sebanyak 20% dari keseluruhan nasabah.
+2. 45% nasabah churn memiliki status skor kredit yang buruk.
+3. 80% nasabah churn berasal dari negara prancis dan jerman.
+4. Rasio persentase nasabah churn berasal dari 56% perempuan dan 44% laki-laki.
+5. Akumulasi persentase dari nasabah churn sekitar 86% yang berasal dari generasi Millennials dan generasi X. Pada generasi tersebut, mereka memiliki jumlah balance dengan rentang menengah ke atas.
+6. Akumulasi persentase dari nasabah churn sekitar 61% yang berasal dari nasabah dengan rentang jumlah balance menengah ke atas.
+7. 69% nasabah churn hanya memiliki satu jenis produk saja.
+8. 70% nasabah churn memiliki kartu kredit.
+9. 64% nasabah churn memiliki riwayat tidak aktif dalam melakukan aktivitas transaksinya. Perbandingan nasabah yang masih menggunakan produk bank antara berstatus aktif dan non-aktif adalah 56 : 44%. Mereka churn karena banyak yang sudah tidak aktif dalam melakukan aktivitas transaksi.
+10. Mayoritas dari nasabah churn tersebut memiliki kartu kredit. Namun mayoritas juga skor kartu kredit mereka berstatus buruk. Kemungkinannya salah satu penyebab adalah produk yang dimiliki hanya satu jenis saja.
+
+## Business Recomendation 
+
+1. Nasabah berstatus aktif pada gen millennials dan gen X yang memiliki jumlah balance menengah ke atas, diberikan suatu program loyalti berupa reward poin agar mereka terus melakukan aktivitas transaksi.
+2. Nasabah berstatus tidak aktif pada generasi dan jumlah saldo yang sama dengan di atas, diberikan push notification melalui SMS kepada nasabah yang berasal dari Perancis dengan konten berupa promosi diskon belanja berkategori lifestyle di merchant tertentu, sedangkan kepada nasabah yang berasal dari Jerman kontennya berupa promosi diskon belanja berkategori luxury item di merchant tertentu.
+3. Meningkatkan kualitas produk yang dimiliki agar nasabah tertarik menggunakan lebih dari satu jenis produk.
+4. Nasabah dengan status skor kredit yang buruk diberikan potongan bunga pinjaman saat pembayaran tagihan kredit.
+
