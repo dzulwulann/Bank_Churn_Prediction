@@ -128,23 +128,30 @@ Tidak terlihat adanya segmentasi tertentu pada distribusi data nasabah churn dan
 <img src="./image/bar_creditcard_insight_5.png" style ="inline-block" alt="univariate" width="auto" heigh="auto"/>
 <img src="./image/bar_isactive_insight_5.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
 
-* Sebanyak 70% nasabah churn ternyata sudah memiliki kartu kredit
-* Sebanyak 64% nasabah churn disebabkan karena tidak aktif kembali dalam melakukan aktivitas transaksi
+* Sebanyak **70%**nasabah churn ternyata sudah memiliki kartu kredit
+* Sebanyak **64%** nasabah churn disebabkan karena tidak aktif kembali dalam melakukan aktivitas transaksi
 
-<img src="./image/creditcard_milenial.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
+<img src="./image/milenials_balance.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
+Seperti yang sudah disebutkan sebelumnya bahwa generasi milenial dan generasi X merupakan generasi dengan akumulasi jumlah churn terbanyak. **53%** nasabah churn pada generasi milenial dan generasi x memiliki rentang jumlah balance menengah ke atas.
 
-Seperti yang sudah disebutkan sebelumnya bahwa generasi milenial dan generasi X merupakan generasi dengan akumulasi jumlah churn terbanyak.Sebanyak **60%** nasabah pada kedua generasi tersebut tidak menggunakan produk bank kembali namun memiliki kartu kredit. Perlu dilakukan pengecekan lebih dalam mengenai status skor kredit mereka.
+<img src="./image/milenials_activity.png" style ="inline-block"  alt="univariate" width="350" heigh="auto"/>
+<img src="./image/retained_activity.png" style ="inline-block"  alt="univariate" width="350" heigh="auto"/>
 
-<img src="./image/milenial_creditscore.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
+Terlihat salah satu faktor generasi x dan milenisal sudah tidak menggunakan produk bank kembali yaitu karena **banyak yang tidak aktif kembali dalam melakukan aktivitas transaksinya**
+
+<img src="./image/creditcard_milenial.png" style ="inline-block"  alt="univariate" width="350" heigh="auto"/>
+Sebanyak **60%** nasabah pada kedua generasi tersebut tidak menggunakan produk bank kembali namun memiliki kartu kredit. Perlu dilakukan pengecekan lebih dalam mengenai status skor kredit mereka.
+
+<img src="./image/milenial_creditscore.png" style ="inline-block"  alt="univariate" width="auto" heigh="350"/>
  
 Sebanyak **38%** nasabah kedua generasi tersebut mempunyai status skor kredit yang buruk, lebih tinggi dibandingkan status lainnya.  
-<img src="./image/milenial_country.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
+<img src="./image/milenial_country.png" style ="inline-block"  alt="univariate" width="auto" heigh="350"/>
 
-Nasabah churn dari generasi milenials dan gen x dengan status credit score buruk banyak terjadi pada negara prancis dan german.
+Nasabah churn dari generasi milenials dan gen x dengan status credit score buruk banyak terjadi pada negara **Prancis dan Jerman**.
 
-<img src="./image/product_own_by_milenia.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
+<img src="./image/product_own_by_milenial.png" style ="inline-block"  alt="univariate" width="350" heigh="350"/>
 
-Nasabah churn dari generasi millenials dan gen x dengan status kredit buruk banyak menggunakan satu jenis produk saja. 
+Nasabah churn dari generasi millenials dan gen x dengan status kredit buruk banyak menggunakan **satu jenis produk saja**. 
 
 ## Sumary Business Insight
 Beberapa rangkuman insight yang diperoleh dari hasil analisa data adalah :
@@ -162,9 +169,10 @@ Beberapa rangkuman insight yang diperoleh dari hasil analisa data adalah :
 11. Mayoritas dari nasabah churn tersebut memiliki kartu kredit. Namun mayoritas juga skor kartu kredit mereka berstatus buruk. Kemungkinannya salah satu penyebab adalah produk yang dimiliki hanya satu jenis saja.
 
 ## Business Recomendation 
+Berikut beberapa rekomendasi bisnis yang kami sarankan berdasarkan insight yang didapatkan : 
 
-1. Nasabah berstatus aktif pada gen millennials dan gen X yang memiliki jumlah balance menengah ke atas, diberikan suatu program loyalti berupa reward poin agar mereka terus melakukan aktivitas transaksi.
-2. Nasabah berstatus tidak aktif pada generasi dan jumlah saldo yang sama dengan di atas, diberikan push notification melalui SMS kepada nasabah yang berasal dari Perancis dengan konten berupa promosi diskon belanja berkategori lifestyle di merchant tertentu, sedangkan kepada nasabah yang berasal dari Jerman kontennya berupa promosi diskon belanja berkategori luxury item di merchant tertentu.
-3. Meningkatkan kualitas produk yang dimiliki agar nasabah tertarik menggunakan lebih dari satu jenis produk.
-4. Nasabah dengan status skor kredit yang buruk diberikan potongan bunga pinjaman saat pembayaran tagihan kredit.
+1. Nasabah berstatus aktif pada gen millennials dan gen X yang memiliki jumlah balance menengah ke atas, diberikan suatu **program loyalti** berupa **reward poin** agar mereka terus melakukan aktivitas transaksi.
+2. Nasabah berstatus tidak aktif pada generasi dan jumlah saldo yang sama dengan di atas, diberikan **push notification** melalui SMS kepada nasabah yang berasal dari **Perancis** dengan konten berupa **promosi diskon** belanja berkategori lifestyle di merchant tertentu, sedangkan kepada nasabah yang berasal dari **Jerman** kontennya berupa promosi diskon belanja berkategori luxury item di merchant tertentu.
+3. Meningkatkan **kualitas produk** yang dimiliki agar nasabah tertarik menggunakan lebih dari satu jenis produk.
+4. Nasabah dengan status skor kredit yang buruk diberikan **potongan bunga pinjaman** saat pembayaran tagihan kredit.
 
