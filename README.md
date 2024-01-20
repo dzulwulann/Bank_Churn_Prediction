@@ -133,11 +133,18 @@ Tidak terlihat adanya segmentasi tertentu pada distribusi data nasabah churn dan
 
 <img src="./image/creditcard_milenial.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
 
-Sebanyak **60%** nasabah pada kedua generasi tersebut tidak menggunakan produk bank kembali namun memiliki kartu kredit. Perlu dilakukan pengecekan lebih dalam mengenai status skor kredit mereka.
+Seperti yang sudah disebutkan sebelumnya bahwa generasi milenial dan generasi X merupakan generasi dengan akumulasi jumlah churn terbanyak.Sebanyak **60%** nasabah pada kedua generasi tersebut tidak menggunakan produk bank kembali namun memiliki kartu kredit. Perlu dilakukan pengecekan lebih dalam mengenai status skor kredit mereka.
 
 <img src="./image/milenial_creditscore.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
  
 Sebanyak **38%** nasabah kedua generasi tersebut mempunyai status skor kredit yang buruk, lebih tinggi dibandingkan status lainnya.  
+<img src="./image/milenial_country.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
+
+Nasabah churn dari generasi milenials dan gen x dengan status credit score buruk banyak terjadi pada negara prancis dan german.
+
+<img src="./image/product_own_by_milenia.png" style ="inline-block"  alt="univariate" width="auto" heigh="auto"/>
+
+Nasabah churn dari generasi millenials dan gen x dengan status kredit buruk banyak menggunakan satu jenis produk saja. 
 
 ## Sumary Business Insight
 Beberapa rangkuman insight yang diperoleh dari hasil analisa data adalah :
@@ -150,8 +157,9 @@ Beberapa rangkuman insight yang diperoleh dari hasil analisa data adalah :
 6. Akumulasi persentase dari nasabah churn sekitar 61% yang berasal dari nasabah dengan rentang jumlah balance menengah ke atas.
 7. 69% nasabah churn hanya memiliki satu jenis produk saja.
 8. 70% nasabah churn memiliki kartu kredit.
-9. 64% nasabah churn memiliki riwayat tidak aktif dalam melakukan aktivitas transaksinya. Perbandingan nasabah yang masih menggunakan produk bank antara berstatus aktif dan non-aktif adalah 56 : 44%. Mereka churn karena banyak yang sudah tidak aktif dalam melakukan aktivitas transaksi.
-10. Mayoritas dari nasabah churn tersebut memiliki kartu kredit. Namun mayoritas juga skor kartu kredit mereka berstatus buruk. Kemungkinannya salah satu penyebab adalah produk yang dimiliki hanya satu jenis saja.
+9. 64% nasabah churn memiliki riwayat tidak aktif dalam melakukan aktivitas transaksinya. 
+10. Perbandingan nasabah yang masih menggunakan produk bank antara berstatus aktif dan non-aktif adalah 56 : 44%. Mereka churn karena banyak yang sudah tidak aktif dalam melakukan aktivitas transaksi.
+11. Mayoritas dari nasabah churn tersebut memiliki kartu kredit. Namun mayoritas juga skor kartu kredit mereka berstatus buruk. Kemungkinannya salah satu penyebab adalah produk yang dimiliki hanya satu jenis saja.
 
 ## Business Recomendation 
 
