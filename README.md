@@ -176,3 +176,55 @@ Berikut beberapa rekomendasi bisnis yang kami sarankan berdasarkan insight yang 
 3. Meningkatkan **kualitas produk** yang dimiliki agar nasabah tertarik menggunakan lebih dari satu jenis produk.
 4. Nasabah dengan status skor kredit yang buruk diberikan **potongan bunga pinjaman** saat pembayaran tagihan kredit.
 
+## Stage 2
+
+Tindak lanjut dari proses stage 1 akan dilakukan beberapa step preprocessing berdasarkan dari hasil analisis data. 
+
+
+Di dalam dataset dengan isi 10.0000 baris dan 14 kolom dengan kolom **Exited** sebagai variable target. Semua atribut sudah memiliki tipe data dan isi data yang sudah sesuai.
+
+<img src="./image/data_info.png" alt="drawing" width="300"/>
+
+Variabel target yang digunakan untuk machine learning adalah kolom **exited** dan sisanya adalah variabel fitur.
+Metode ML yang digunakan adalah **tipe supervised learning** sebab labelnya sudah disediakan dan karena bentuknya
+merupakan nilai binary atau kategorikal, maka metode ML yang digunakan adalah **klasifikasi**.
+
+Berikut ini merupakan keterangan dari masing - masing atribut
+
+* CustomerId : Nomor akun
+* Surname : Nama belakang nasabah
+* CreditScore : Nilai kredit
+* Geography : Negara tempat tinggal nasabah
+* Gender : Jenis kelamin
+* Age : Usia nasabah
+* Tenure : lamanya menjadi nasabah
+* Balance : Saldo rekening
+* NumOfProducts : Jumlah produk yang dibeli nasabah melalui bank
+* HasCrCrad : Kepemilikan kartu kredit
+* isActiveMember : Keaktifan nasabah
+* EstimatedSalary : Gaji nasabah
+* Exited : Keputusan nasabah churn atau tidak 
+
+Berikut ini langkah - langkah preprocessing yang kami lakukan untuk dataset 
+
+# Removing Irrelevant Features (part 1)
+
+
+Melakukan penghapusan feature row number untuk mengecek apakah ada data duplikat. 
+
+# Removing Duplicates 
+
+
+tidak ditemukan adanya data duplikat
+
+# Removing Irrelevant Features (Part 2)
+
+
+Kami menghapus feature CustomerId dan Surename, karena feature tersebut tidak memberikan informasi yang penting untuk digunakan pada proses klasifikasi.
+
+# Handling Missing Value
+
+
+Kami melakukan pengecekan apakah terdapat nilai kosong di dalam data. Hasilnya tidak ditemukan nilai kosong atau missing value dan semua nilai pada feature dengan tipe kategorikal juga relevan terhadap nama kolomnya.
+
+# Feature Encoding
