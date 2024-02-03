@@ -223,7 +223,7 @@ Melakukan penghapusan feature row number untuk mengecek apakah ada data duplikat
 
 <img src="./image/check_duplicate.png" style ="inline-block" />
 
-tidak ditemukan adanya data duplikat
+**tidak ditemukan adanya data duplikat**
 
 ### Removing Irrelevant Features (Part 2)
 
@@ -292,7 +292,7 @@ kami menggunakan metode test statistik **chi2** dan nilai  **VIF (variance Infla
 
 <img src="./image/chi2.png" style ="inline-block" />
 
-Hasil uji statistik ch2, menunjukan hanya feature **'HasCrCard'** yang **tidak memiliki pengaruh signifikan** *(p > 0.05)* terhadap target. Feature hasil encoding menunjukan feature **memiliki pengaruh signifikan** (p < 0.05) terhadap target.
+Hasil uji statistik chi2, menunjukan hanya feature **'HasCrCard'** yang **tidak memiliki pengaruh signifikan** *(p > 0.05)* terhadap target. Feature hasil encoding menunjukan feature **memiliki pengaruh signifikan** (p < 0.05) terhadap target.
 
 <img src="./image/result_vif.png" style ="inline-block" />
 
