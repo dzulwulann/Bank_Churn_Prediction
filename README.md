@@ -207,24 +207,80 @@ Berikut ini merupakan keterangan dari masing - masing atribut
 
 Berikut ini langkah - langkah preprocessing yang kami lakukan untuk dataset 
 
-# Removing Irrelevant Features (part 1)
-
+### Removing Irrelevant Features (part 1)
+```
+df_bank = df_bank.drop(columns = ['RowNumber'])
+```
 
 Melakukan penghapusan feature row number untuk mengecek apakah ada data duplikat. 
 
-# Removing Duplicates 
+### Removing Duplicates 
 
+<img src="./image/check_duplicate.png" style ="inline-block" />
 
 tidak ditemukan adanya data duplikat
 
-# Removing Irrelevant Features (Part 2)
+### Removing Irrelevant Features (Part 2)
+
+```
+df_bank = df_bank.drop(columns = ['CustomerId', 'Surname'])
+```
 
 
 Kami menghapus feature CustomerId dan Surename, karena feature tersebut tidak memberikan informasi yang penting untuk digunakan pada proses klasifikasi.
 
-# Handling Missing Value
+### Handling Missing Value
+<img src="./image/handling missing value.png" style ="inline-block" />
+<img src="./image/handling missing value(2).png" style ="inline-block" />
 
 
 Kami melakukan pengecekan apakah terdapat nilai kosong di dalam data. Hasilnya tidak ditemukan nilai kosong atau missing value dan semua nilai pada feature dengan tipe kategorikal juga relevan terhadap nama kolomnya.
 
-# Feature Encoding
+### Feature Encoding
+
+<img src="./image/feature_encoding_1.png" style ="inline-block" />
+
+Di dalam dataset terdapat 2 feature kategorikal yang perlu dilakukan encoding, feature tersebut adalah Geography dan Gender. Pada feature Gender dilakukan encoding dengan menggunakan **label encoding** karena fitur tersebut hanya memiliki 2 nilai saja. Untuk feature Geography kami lakukan **one-hot encoding**, karena feature tersebut memiliki lebih dari 2 jenis dan bukan bersifat ordinar atau memiliki tingkatan. 
+
+```
+# convert Geography feature from categorical into numerical by using one-hot encoding
+
+from sklearn.preprocessing import OneHotEncoder 
+  
+## Converting type of columns to category 
+
+df_bank['Geography'] = df_bank['Geography'].astype('category') 
+# df_bank['Gender'] = df_bank['Gender'].astype('category')
+  
+## Assigning numerical values and storing it in another columns
+
+df_bank['Geo_new'] = df_bank['Geography'].cat.codes
+# df_bank['Gender_new'] = df_bank['Gender'].cat.codes
+   
+## Create an instance of One-hot-encoder 
+
+enc = OneHotEncoder() 
+  
+## Passing encoded columns 
+  
+enc_data = pd.DataFrame(enc.fit_transform( 
+    df_bank[['Geo_new']]).toarray()) 
+  
+## Merge with main
+
+df_bank = df_bank.join(enc_data)
+
+## rename the column
+
+df_bank = df_bank.rename(columns={0 : "is_France", 1 : "is_Germany", 2 : "is_Spain"}) #3 : "is_Female", 4 : "is_Male"})
+
+## drop irrelevant column
+
+df_bank = df_bank.drop(columns = ['Geography', 'Geo_new']) #, 'Gender', 'Gender_new'])
+
+```
+
+<img src="./image/result_encoding.png" style ="inline-block" />
+
+setelah melakukan encoding, kami akan melakukan pengecekan apakah feature hasil encoding memiliki pengaruh signifikan terhadap target serta apakah ada indikasi multikolinearitas antar feature. Untuk melakukan hal tersebut,
+kami menggunakan metode test statistik chi2 dan nilai  VIF (variance Inflation Factor)
