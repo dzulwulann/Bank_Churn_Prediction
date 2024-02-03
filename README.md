@@ -176,6 +176,8 @@ Berikut beberapa rekomendasi bisnis yang kami sarankan berdasarkan insight yang 
 3. Meningkatkan **kualitas produk** yang dimiliki agar nasabah tertarik menggunakan lebih dari satu jenis produk.
 4. Nasabah dengan status skor kredit yang buruk diberikan **potongan bunga pinjaman** saat pembayaran tagihan kredit.
 
+----
+
 ## Stage 2
 
 Tindak lanjut dari proses stage 1 akan dilakukan beberapa step preprocessing berdasarkan dari hasil analisis data. 
@@ -188,6 +190,7 @@ Di dalam dataset dengan isi 10.0000 baris dan 14 kolom dengan kolom **Exited** s
 Variabel target yang digunakan untuk machine learning adalah kolom **exited** dan sisanya adalah variabel fitur.
 Metode ML yang digunakan adalah **tipe supervised learning** sebab labelnya sudah disediakan dan karena bentuknya
 merupakan nilai binary atau kategorikal, maka metode ML yang digunakan adalah **klasifikasi**.
+
 
 Berikut ini merupakan keterangan dari masing - masing atribut
 
@@ -204,6 +207,8 @@ Berikut ini merupakan keterangan dari masing - masing atribut
 * isActiveMember : Keaktifan nasabah
 * EstimatedSalary : Gaji nasabah
 * Exited : Keputusan nasabah churn atau tidak 
+
+----
 
 Berikut ini langkah - langkah preprocessing yang kami lakukan untuk dataset 
 
@@ -282,5 +287,34 @@ df_bank = df_bank.drop(columns = ['Geography', 'Geo_new']) #, 'Gender', 'Gender_
 
 <img src="./image/result_encoding.png" style ="inline-block" />
 
-setelah melakukan encoding, kami akan melakukan pengecekan apakah feature hasil encoding memiliki pengaruh signifikan terhadap target serta apakah ada indikasi multikolinearitas antar feature. Untuk melakukan hal tersebut,
-kami menggunakan metode test statistik chi2 dan nilai  VIF (variance Inflation Factor)
+setelah melakukan encoding, kami akan melakukan pengecekan apakah feature hasil encoding memiliki **pengaruh signifikan** terhadap target serta apakah ada **indikasi multikolinearitas antar feature**. Untuk melakukan hal tersebut,
+kami menggunakan metode test statistik **chi2** dan nilai  **VIF (variance Inflation Factor)**. 
+
+<img src="./image/chi2.png" style ="inline-block" />
+
+Hasil uji statistik ch2, menunjukan hanya feature **'HasCrCard'** yang **tidak memiliki pengaruh signifikan** *(p > 0.05)* terhadap target. Feature hasil encoding menunjukan feature **memiliki pengaruh signifikan** (p < 0.05) terhadap target.
+
+<img src="./image/result_vif.png" style ="inline-block" />
+
+Hasil uji statistik vif menujukan tiga feature baru hasil encoding memiliki **nilai VIF > 5.** Bisa diartikan ada indikasi multikolinearitas pada tiga feature tersebut. Sebagai langkah lanjutan akan dilakukan penggabungan feature is_Germany dengan is_Spain menjadi not_France apabila model mengalami overfitting.
+
+### Feature Transformation (Scaling)
+
+```
+# Standardization
+
+from sklearn.preprocessing import StandardScaler
+ss = StandardScaler()
+
+numerical_features = X.columns.to_list()
+for n in numerical_features:
+  scaler = ss.fit(X_train[[n]])
+  X_train[n] = scaler.transform(X_train[[n]])
+  X_test[n] = scaler.transform(X_test[[n]])
+
+```
+
+Kami melakukan scaling data pada data training dan data testing dengan **metode standarisasi** agar semua fitur yang ada memiliki bentuk distribusi mendekati normal dan nilai jarak min-max antar feature tidak terlalu jauh
+
+----
+
