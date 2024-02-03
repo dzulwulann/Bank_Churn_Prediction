@@ -183,7 +183,7 @@ Berikut beberapa rekomendasi bisnis yang kami sarankan berdasarkan insight yang 
 Tindak lanjut dari proses stage 1 akan dilakukan beberapa step preprocessing berdasarkan dari hasil analisis data. 
 
 
-Di dalam dataset dengan isi 10.0000 baris dan 14 kolom dengan kolom **Exited** sebagai variable target. Semua atribut sudah memiliki tipe data dan isi data yang sudah sesuai.
+Di dalam dataset dengan isi 10.000 baris dan 14 kolom dengan kolom **Exited** sebagai variable target. Semua atribut sudah memiliki tipe data dan isi data yang sudah sesuai.
 
 <img src="./image/data_info.png" alt="drawing" width="300"/>
 
