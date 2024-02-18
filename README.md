@@ -407,7 +407,10 @@ Hyperparameter yang kami tunning yaitu C, penalty dan solver parameter. Pada has
 
 ### KNN (K-Nearest Neighbours)
 
+<img src="./image/KNN.png" style ="inline-block" />
 
+Kami melakukan modeling dengan algoritma KNN (K-Nearest Neighbours) dan mendapatkan hasil performansi underfitting dan overfiting pada metric evaluasi.
 
+<img src="./image/Hyperparameter_tunning_knn.png" style ="inline-block" />
 
-
+Setelah dilakukan hyperparamter tunning pada parameter n_neigbors, weight, dan P, hasil performansi menunjukan F1 score tidak mendapatkan nilai yang baik, namun terjadi peningkatan performansi pada metric ROC-AOC. 
