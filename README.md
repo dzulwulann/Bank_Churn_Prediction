@@ -318,3 +318,26 @@ Kami melakukan scaling data pada data training dan data testing dengan **metode 
 
 ----
 
+## Stage 3
+
+### Spliting Data Training and Testing 
+
+```
+# Split the data into training and testing with the proportion of 70:30
+
+X = df_bank_new.drop(columns=['Exited'])
+y = df_bank_new[['Exited']]
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+```
+
+Pada Stage 3 ini kami memutuskan untuk melakukan spliting data testing dan data training dengan proporsi pembagian yaitu 70 : 30 
+
+### Checking Outlier
+
+<img src="./image/outlier_after_dataspliting.png" style ="inline-block" />
+
+Setelah kami lakukan visualisasi terhadap data training terdapat feature yang memiliki outlier antara lain feature Balancepersalary, Age dan CreditScore.
+
+
