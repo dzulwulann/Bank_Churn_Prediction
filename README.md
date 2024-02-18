@@ -369,7 +369,7 @@ print(f'Jumlah baris setelah memfilter outlier: {len(data_train)}')
 
 ```
 
-Kami menghapus outlier yang terdapat pada feature BalanceperSalary, Age dan CreditScore menggunakan **Z-Score**. Penghapusan outlier juga dilakukan pada data untuk cross validation. 
+Kami menghapus outlier yang terdapat pada feature BalanceperSalary, Age dan CreditScore menggunakan **Z-Score**. Penghapusan outlier juga dilakukan pada data untuk cross validation. Selanjutnya dilakukan feature scaling dengan standarization seperti pada Stage 2. Proses ini dilakukan untuk data naive spliting dan data cros validation. 
 
 ### Handling Data Imbalance Dataset
 
@@ -384,6 +384,15 @@ Kami akan melakukan balancing data dengan metode **Undersampling**. Proses ini k
 from imblearn import under_sampling
 X_under, y_under = under_sampling.RandomUnderSampler(random_state = 42, sampling_strategy = 0.428).fit_resample(X_train, y_train)
 ```
+Yang selanjutnya dilakukan data split untuk naive spliting data dan Cross Validation Data.
+
+----
+## Modeling
+
+Kami melakukan experimen untuk memilih model dari beberapa algoritma. Kami memilih metric evaluasi F1 score sebagai metrics utama dalam pemilihan model. F1 score kami pertimbangan sebagai metric evaluasi karena adanya data imbalance dan kami fokus pada pemilihan customer yang berpotensi akan churn dengan mempertimbangkan biaya marketing yang akan dikeluarkan. Kami juga menggunakan metric Recall dan ROC-AUC sebagai metrics pendukung.
+
+### Logistic Regression
+
 
 
 
