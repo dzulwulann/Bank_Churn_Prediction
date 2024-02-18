@@ -298,6 +298,15 @@ Hasil uji statistik chi2, menunjukan hanya feature **'HasCrCard'** yang **tidak 
 
 Hasil uji statistik vif menujukan tiga feature baru hasil encoding memiliki **nilai VIF > 5.** Bisa diartikan ada indikasi multikolinearitas pada tiga feature tersebut. Sebagai langkah lanjutan akan dilakukan penggabungan feature is_Germany dengan is_Spain menjadi not_France apabila model mengalami overfitting.
 
+### Feature Engineering
+
+```
+# balance per salary
+
+df_bank_new['BalanceperSalary'] = df_bank_new['Balance'] / df_bank_new['EstimatedSalary']
+```
+Kami menambahkan feature baru yaitu **BalanceperSalary**
+
 ### Feature Transformation (Scaling)
 
 ```
@@ -332,12 +341,52 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 ```
 
-Pada Stage 3 ini kami memutuskan untuk melakukan spliting data testing dan data training dengan proporsi pembagian yaitu 70 : 30 
+Pada Stage 3 ini kami memutuskan untuk melakukan spliting data testing dan data training dengan proporsi pembagian yaitu 70 : 30. Spliting Data disini dilakukan untuk data selanjutnya dilakukan proses handling outlier.
 
 ### Checking Outlier
 
 <img src="./image/outlier_after_dataspliting.png" style ="inline-block" />
 
 Setelah kami lakukan visualisasi terhadap data training terdapat feature yang memiliki outlier antara lain feature Balancepersalary, Age dan CreditScore.
+
+### Handling Outlier
+
+```
+# Removing outliers using Z-Score
+
+from scipy import stats
+
+print(f'Jumlah baris sebelum memfilter outlier {len(data_train)}')
+
+
+for col in ['BalanceperSalary', 'Age', 'CreditScore']:
+    zscore = np.abs(stats.zscore(data_train[col]))
+    filtered_entries = (zscore < 3)
+
+data_train = data_train[filtered_entries]
+
+print(f'Jumlah baris setelah memfilter outlier: {len(data_train)}')
+
+```
+
+Kami menghapus outlier yang terdapat pada feature BalanceperSalary, Age dan CreditScore menggunakan **Z-Score**. Penghapusan outlier juga dilakukan pada data untuk cross validation. 
+
+### Handling Data Imbalance Dataset
+
+Pada dataset yang digunakan terjadi ketidakseimbangan proporsi data pada feature target yaitu 
+<img src="./image/imbalance_data.png" style ="inline-block" />
+
+Kami akan melakukan balancing data dengan metode **Undersampling**. Proses ini kami lakukan pada naive spliting data dan data cross validation.
+
+```
+# using undersamping for majority class with the proportion feature target is 70:30
+
+from imblearn import under_sampling
+X_under, y_under = under_sampling.RandomUnderSampler(random_state = 42, sampling_strategy = 0.428).fit_resample(X_train, y_train)
+```
+
+
+
+
 
 
