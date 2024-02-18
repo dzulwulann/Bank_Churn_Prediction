@@ -389,11 +389,23 @@ Yang selanjutnya dilakukan data split untuk naive spliting data dan Cross Valida
 ----
 ## Modeling
 
-Kami melakukan experimen untuk memilih model dari beberapa algoritma. Kami memilih metric evaluasi F1 score sebagai metrics utama dalam pemilihan model. F1 score kami pertimbangan sebagai metric evaluasi karena adanya data imbalance dan kami fokus pada pemilihan customer yang berpotensi akan churn dengan mempertimbangkan biaya marketing yang akan dikeluarkan. Kami juga menggunakan metric Recall dan ROC-AUC sebagai metrics pendukung.
+Kami melakukan experimen untuk memilih model dari beberapa algoritma. Kami memilih metric evaluasi **F1 score** sebagai metrics utama dalam pemilihan model. F1 score kami pertimbangan sebagai metric evaluasi karena adanya data imbalance dan kami fokus pada pemilihan customer yang berpotensi akan churn dengan mempertimbangkan biaya marketing yang akan dikeluarkan. Kami juga menggunakan metric **Recall** dan **ROC-AUC** sebagai metrics pendukung.
 
 ### Logistic Regression
 
+Kami melakukan modeling dengan logistic regression sebagai basis algoritma. 
 
+<img src="./image/logistic_regression.png" style ="inline-block" />
+
+Hasil modeling logistic regression pada metric F1 score, Recall dan ROC-AUC menunjukan hasil yang **underfiting**, tidak menujukan adanya overfitting untuk semua metrics evaluasi. 
+
+Kami juga melakukan hyperparameter tunning untuk algoritma Logistic Regression dengan menggunakan **GridSearch** dan mendapatkan hasil berikut ini 
+
+<img src="./image/Hyperparameter_tunning_lr.png" style ="inline-block" />
+
+Hyperparameter yang kami tunning yaitu C, penalty dan solver parameter. Pada hasil metric evaluasi tidak menunjukan perubahan setelah dilakukan hyperparameter tunning. 
+
+### KNN (K-Nearest Neighbours)
 
 
 
