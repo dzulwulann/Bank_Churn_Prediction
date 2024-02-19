@@ -419,16 +419,22 @@ Setelah dilakukan hyperparamter tunning pada parameter n_neigbors, weight, dan P
 
 <img src="./image/SVM.png" style ="inline-block" />
 
+ Hasil performansi menggunakan algoritma SVM mengalami underfitting untuk metrics F1 score, Recall dan ROC-AOC.
 
 ### Random Forest
 
 <img src="./image/random_forest.png" style ="inline-block" />
 
+Kami melakukan modeling dengan algoritma random forest. Performansi yang dihasilkan pada metric F1 score dan Recall mengalami undefitting, sedangkan metric ROC-AOC mengalami overfitting.
+
 ### Adaboost
 
 <img src="./image/adaboost.png" style ="inline-block" />
+
+Hasil performansi dari model dengan algoritma Adaboost menunjukan metric F1 score dan Recall mengalami underfitting dan menunjuka bestfit pada metric ROC-AOC.
 
 ### XGboost
 
 <img src="./image/xgboost.png" style ="inline-block" />
 
+Kami juga melakukan modeling untuk algoritma XGboost. Metric F1 score dan Recall mengalami underfitting, sementara ROC-AOC mengalami overfitting.
