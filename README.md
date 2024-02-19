@@ -421,6 +421,11 @@ Setelah dilakukan hyperparamter tunning pada parameter n_neigbors, weight, dan P
 
  Hasil performansi menggunakan algoritma SVM mengalami underfitting untuk metrics F1 score, Recall dan ROC-AOC.
 
+<img src="./image/hyperparameter_tunning_svm.png" style ="inline-block" />
+
+Kami melakukan hyperparameter tunning untuk parameter kernel, C parameter, Gamma, dan Class Weight. 
+Hasil performansi setelah dilakukan hyperparameter tunning menunjukan hasil metric F1 score dan Recall masih tetap underfit. Metric ROC-AUC menunjukan hasil yang baik untuk model ini.
+
 ### Random Forest
 
 <img src="./image/random_forest.png" style ="inline-block" />
