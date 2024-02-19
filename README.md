@@ -414,3 +414,21 @@ Kami melakukan modeling dengan algoritma KNN (K-Nearest Neighbours) dan mendapat
 <img src="./image/Hyperparameter_tunning_knn.png" style ="inline-block" />
 
 Setelah dilakukan hyperparamter tunning pada parameter n_neigbors, weight, dan P, hasil performansi menunjukan F1 score tidak mendapatkan nilai yang baik, namun terjadi peningkatan performansi pada metric ROC-AOC. 
+
+### SVM (Support Vector Machine)
+
+<img src="./image/SVM.png" style ="inline-block" />
+
+
+### Random Forest
+
+<img src="./image/random_forest.png" style ="inline-block" />
+
+### Adaboost
+
+<img src="./image/adaboost.png" style ="inline-block" />
+
+### XGboost
+
+<img src="./image/xgboost.png" style ="inline-block" />
+
