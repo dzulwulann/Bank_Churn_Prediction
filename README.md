@@ -432,14 +432,23 @@ Hasil performansi setelah dilakukan hyperparameter tunning menunjukan hasil metr
 
 Kami melakukan modeling dengan algoritma random forest. Performansi yang dihasilkan pada metric F1 score dan Recall mengalami undefitting, sedangkan metric ROC-AOC mengalami overfitting.
 
+<img src="./image/Hyperparameter_tunning_randomforest.png" style ="inline-block" />
+
+Kami melakukan hyperparameter tunning untuk algorima random forest pada parameter class weight, min samples split, min weight fraction leaf, max lead nodes dan max samples.
+
+Hasil performansi tidak lagi mengalami overfitting untuk semua metrics. Metric Recall mengalami peningkatan nilai. ROC - AOC mendapatkan nilai yang baik setelah dilakukan hyperparameter tunning. Dari hasil performansi tersebut, algoritma ini dapat dipertimbangkan sebagai algoritma yang digunakan untuk menentukan prediksi churn nasabah bank.
+
 ### Adaboost
 
 <img src="./image/adaboost.png" style ="inline-block" />
 
 Hasil performansi dari model dengan algoritma Adaboost menunjukan metric F1 score dan Recall mengalami underfitting dan menunjuka bestfit pada metric ROC-AOC.
+<img src="./image/Hyperparameter_tunning_adaboost.png" style ="inline-block" />
 
 ### XGboost
 
 <img src="./image/xgboost.png" style ="inline-block" />
 
 Kami juga melakukan modeling untuk algoritma XGboost. Metric F1 score dan Recall mengalami underfitting, sementara ROC-AOC mengalami overfitting.
+
+<img src="./image/Hyperparameter_tunning_xgboost.png" style ="inline-block" />
