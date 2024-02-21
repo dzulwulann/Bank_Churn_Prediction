@@ -455,3 +455,4 @@ Kami juga melakukan modeling untuk algoritma XGboost. Metric F1 score dan Recall
 
 <img src="./image/Hyperparameter_tunning_xgboost.png" style ="inline-block" />
 
+Pada algoritma ini hyperparameter yang kami tunning adalah gamma, max depth, dan max leaves. Hasil performansi untuk semua metric mengalami penurunan setelah dilakuan hyperparamter tunning. Namun hasil performansi tidak mengalami overfitting, sehingga algoritma ini masih bisa dipertimbangkan untuk digunakan sebagai prediksi churn nasabah bank.
