@@ -464,3 +464,10 @@ Pada algoritma ini hyperparameter yang kami tunning adalah gamma, max depth, dan
 
 Dari model yang telah kami coba, kami memutuskan memilih menggunakan model **Random Forest** dengan hasil performansi **F1 Score : 0,64, Recall : 0,74 dan ROC-AOC : 0,82**.
 Alasan lain memilih model Random Forest adalah model yang robust terhadap outlier, dapat bekerja baik dengan data non-linear, risiko overfitting yang rendah, efisien untuk data yang besar, dan akurasi yang cenderung tinggi daripada algoritma klasifikasi lainnya, walaupun model ini membutuhkan waktu yang relatif lama untuk data yang besar serta memiliki kecenderungan bias untuk data kategorikal.
+
+### Feature Importance from best model
+
+
+<img src="./image/feature importance.png" style ="inline-block" />
+
+Feature importance dari model Random Forest didapatkan bahwa feature **Age, NumOfProducts, IsActiveMember, Balance dan Is_Germany** merupakan top 5 feature yang sangat berpengaruh dalam prediksi churn nasabah bank.
