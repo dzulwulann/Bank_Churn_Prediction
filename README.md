@@ -456,3 +456,11 @@ Kami juga melakukan modeling untuk algoritma XGboost. Metric F1 score dan Recall
 <img src="./image/Hyperparameter_tunning_xgboost.png" style ="inline-block" />
 
 Pada algoritma ini hyperparameter yang kami tunning adalah gamma, max depth, dan max leaves. Hasil performansi untuk semua metric mengalami penurunan setelah dilakuan hyperparamter tunning. Namun hasil performansi tidak mengalami overfitting, sehingga algoritma ini masih bisa dipertimbangkan untuk digunakan sebagai prediksi churn nasabah bank.
+
+----
+### Best Model
+
+<img src="./image/hasil performansi.png" style ="inline-block" />
+
+Dari model yang telah kami coba, kami memutuskan memilih menggunakan model **Random Forest** dengan hasil performansi **F1 Score : 0,64, Recall : 0,74 dan ROC-AOC : 0,82**.
+Alasan lain memilih model Random Forest adalah model yang robust terhadap outlier, dapat bekerja baik dengan data non-linear, risiko overfitting yang rendah, efisien untuk data yang besar, dan akurasi yang cenderung tinggi daripada algoritma klasifikasi lainnya, walaupun model ini membutuhkan waktu yang relatif lama untuk data yang besar serta memiliki kecenderungan bias untuk data kategorikal.
