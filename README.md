@@ -445,6 +445,8 @@ Hasil performansi tidak lagi mengalami overfitting untuk semua metrics. Metric R
 Hasil performansi dari model dengan algoritma Adaboost menunjukan metric F1 score dan Recall mengalami underfitting dan menunjuka bestfit pada metric ROC-AOC.
 <img src="./image/Hyperparameter_tunning_adaboost.png" style ="inline-block" />
 
+Hyperparameter yang kami tunning adalah n_estimator, learning rate dan algorithm parameter. Hasil performansi setelah dilakukan hyperparamter tunning tidak menunjukan perbedaan yang signifikan dengan default parameter.Namun demikian hasil performansi juga tidak menunjukan hasil yang overfitting pada semua metric. Sehingga algoritma ini dapat dipertimbangkan untuk digunakan sebagai algoritma prediksi churn nasabah bank.
+
 ### XGboost
 
 <img src="./image/xgboost.png" style ="inline-block" />
@@ -452,3 +454,4 @@ Hasil performansi dari model dengan algoritma Adaboost menunjukan metric F1 scor
 Kami juga melakukan modeling untuk algoritma XGboost. Metric F1 score dan Recall mengalami underfitting, sementara ROC-AOC mengalami overfitting.
 
 <img src="./image/Hyperparameter_tunning_xgboost.png" style ="inline-block" />
+
