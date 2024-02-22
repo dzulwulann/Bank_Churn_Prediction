@@ -471,3 +471,28 @@ Alasan lain memilih model Random Forest adalah model yang robust terhadap outlie
 <img src="./image/feature importance.png" style ="inline-block" />
 
 Feature importance dari model Random Forest didapatkan bahwa feature **Age, NumOfProducts, IsActiveMember, Balance dan Is_Germany** merupakan top 5 feature yang sangat berpengaruh dalam prediksi churn nasabah bank.
+
+### SHAP Value from Best Model
+
+Kami melakukan Shap analysis untuk melihat hubungan pengaruh antar feature terhadap model 
+
+<img src="./image/shap_analysis.png" style ="inline-block" />
+
+Informasi yang didapat berdasarkan SHAP value yang telah dilakukan adalah:
+1. Older customer cenderung akan churn
+2. Inactive customer cenderung akan churn
+3. Semakin sedikit product yang digunakan semakin besar
+kemungkinan churn
+4. Semakin banyak sisa balancenya, semakin besar
+kemungkinan customer akan churn
+5. Customer dari Jerman cenderung churn
+6. Semakin banyak salary yang mereka simpan, semakin
+besar kemungkinan churn
+7. Customer perempuan cenderung churn
+8. Semakin kecil tenure, semakin besar kemungkinan
+churn
+9. Salary, Creditcard, Creditscore, and from spanish tidak
+berpengaruh terhadap churn customer.
+
+### Business Insight 
+
