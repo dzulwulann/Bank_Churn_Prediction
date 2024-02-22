@@ -496,3 +496,12 @@ berpengaruh terhadap churn customer.
 
 ### Business Insight 
 
+Dari hasil modeling, feature importance, dan SHAP value business Insight yang bisa didapatkan adalah memfokuskan marketing program untuk mencegah customer churn pada **old generation**, **few owned product**, **high balance**, **from Germany** dan mencari solusi untuk mencegah customer aktif menjadi tidak aktif yang akan memungkinan jumlah churn jadi lebih besar.
+
+### Bussiness Recomendation
+
+Berdasarkan business insight yang didapat maka business recommendation yang bisa kami berikan adalah:
+1. Loyalty reward program seperti poin untuk customer aktif yang berasal dari kelompok Millennials dan Gen X dengan mid-high balance dan jarang
+melakukan transaksi.
+2. Memberikan push notifications via pesan untuk customer non aktif di German dengan promosi diskon untuk berbelanja di merchant tertentu.
+3. Meningkatkan kualitas product dari bank sehingga customer akan tertarik menggunakan product layanan bank.
